@@ -1,29 +1,19 @@
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
-
-@theme {
-  --color-bg: #0a0a0a;
-  --color-surface: #111111;
-  --color-text: #e8e4dd;
-  --color-text-dim: #787167;
-  --color-accent: #f0a500;
-  --color-accent-glow: #f0a50033;
-  --color-border: #1e1e1e;
-
-  --font-mono: "Space Mono", monospace;
-  --font-serif: "Lora", serif;
-  --font-code: "JetBrains Mono", monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-bg text-text font-mono antialiased;
+    background-color: #0a0a0a;
+    color: #e8e4dd;
+    font-family: "Space Mono", monospace;
+    -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
 
   ::selection {
-    background: var(--color-accent);
-    color: var(--color-bg);
+    background: #f0a500;
+    color: #0a0a0a;
   }
 
   ::-webkit-scrollbar {
@@ -31,16 +21,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--color-bg);
+    background: #0a0a0a;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-border);
+    background: #1e1e1e;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text-dim);
+    background: #787167;
   }
 }
 
@@ -56,8 +46,8 @@
 
 /* Amber glow pulse */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 4px var(--color-accent-glow); }
-  50% { box-shadow: 0 0 16px var(--color-accent-glow), 0 0 32px var(--color-accent-glow); }
+  0%, 100% { box-shadow: 0 0 4px #f0a50033; }
+  50% { box-shadow: 0 0 16px #f0a50033, 0 0 32px #f0a50033; }
 }
 
 .animate-glow-pulse {
@@ -89,37 +79,37 @@
 
 /* Prose overrides for markdown content */
 .prose-terminal {
-  --tw-prose-body: var(--color-text);
-  --tw-prose-headings: var(--color-text);
-  --tw-prose-links: var(--color-accent);
-  --tw-prose-bold: var(--color-text);
-  --tw-prose-quotes: var(--color-text-dim);
-  --tw-prose-code: var(--color-accent);
-  --tw-prose-hr: var(--color-border);
+  --tw-prose-body: #e8e4dd;
+  --tw-prose-headings: #e8e4dd;
+  --tw-prose-links: #f0a500;
+  --tw-prose-bold: #e8e4dd;
+  --tw-prose-quotes: #787167;
+  --tw-prose-code: #f0a500;
+  --tw-prose-hr: #1e1e1e;
 }
 
 .prose-terminal h2 {
-  font-family: var(--font-mono);
+  font-family: "Space Mono", monospace;
   letter-spacing: -0.02em;
 }
 
 .prose-terminal p,
 .prose-terminal li {
-  font-family: var(--font-serif);
+  font-family: "Lora", serif;
   line-height: 1.8;
 }
 
 .prose-terminal code {
-  font-family: var(--font-code);
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.875em;
-  background: var(--color-surface);
+  background: #111111;
   padding: 0.15em 0.4em;
   border-radius: 3px;
 }
 
 .prose-terminal pre {
-  background: var(--color-surface) !important;
-  border: 1px solid var(--color-border);
+  background: #111111 !important;
+  border: 1px solid #1e1e1e;
   border-radius: 4px;
 }
 
@@ -129,24 +119,24 @@
 }
 
 .prose-terminal blockquote {
-  border-left-color: var(--color-accent);
+  border-left-color: #f0a500;
   font-style: italic;
 }
 
 .prose-terminal a {
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: #f0a500;
   text-underline-offset: 3px;
   transition: color 0.2s;
 }
 
 .prose-terminal a:hover {
-  color: var(--color-accent);
+  color: #f0a500;
 }
 
 .prose-terminal strong {
-  color: var(--color-text);
+  color: #e8e4dd;
 }
 
 .prose-terminal hr {
-  border-color: var(--color-border);
+  border-color: #1e1e1e;
 }
