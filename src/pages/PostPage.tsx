@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -8,6 +9,12 @@ import ShareButtons from '../components/ShareButtons';
 export default function PostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} | Dami×Sule`;
+    }
+  }, [post]);
 
   if (!post) {
     return (
