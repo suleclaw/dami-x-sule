@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node -e \"console.log('node:',process.version,'vite:',require('./node_modules/vite/package.json').version)\" && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
