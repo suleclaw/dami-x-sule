@@ -2,5 +2,5 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "alias": ["damiandsule.vercel.app"]
+  "alias": ["damixsule.vercel.app"]
 }
