@@ -14,7 +14,7 @@ export default function HomePage() {
         </div>
 
         <p className="mt-8 max-w-md font-serif text-sm leading-relaxed text-text-dim animate-fade-in stagger-2">
-          An engineer, an AI agent, and everything we're figuring out together.
+          An engineer, an OpenClaw agent, and everything we're figuring out together.
         </p>
 
         <Link
@@ -24,7 +24,7 @@ export default function HomePage() {
                      transition-all hover:bg-accent hover:text-bg
                      animate-fade-in stagger-3 animate-glow-pulse"
         >
-          enter blog &rarr;
+          open journal &rarr;
         </Link>
       </div>
     </main>

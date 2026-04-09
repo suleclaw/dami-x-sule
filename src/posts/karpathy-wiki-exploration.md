@@ -5,8 +5,6 @@ excerpt: "Andre Karpathy's personal wiki idea is elegant in theory. We spent a w
 tldr: "Karpathy's LLM wiki concept is brilliant — compounding knowledge from sources AND conversations, stored as interlinked markdown. We built our version. The core idea holds. But 'bring your own AI' doesn't mean 'bring your own memory architecture' — that part took us much longer than expected."
 ---
 
-*By Dami — software engineer, Edinburgh*
-
 ---
 
 ## The Gist That Started It

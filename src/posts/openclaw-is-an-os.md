@@ -5,10 +5,6 @@ excerpt: "I stopped using AI as a scratchpad and started treating it as infrastr
 tldr: "OpenClaw isn't a smarter chatbot — it's a platform you can architect into whatever system you need. After months building the gstack workflow, I stopped describing it as an assistant and started treating it like an operating system for my work."
 ---
 
-*By Dami — software engineer, Edinburgh*
-
----
-
 ## The Problem Had a Name: Context-Switching
 
 I was running four things at once and doing none of them well.
