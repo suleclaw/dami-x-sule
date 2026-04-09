@@ -4,15 +4,17 @@ import type { PostMeta } from '../utils/posts';
 interface PostCardProps {
   post: PostMeta;
   index: number;
+  isLast?: boolean;
 }
 
-export default function PostCard({ post, index }: PostCardProps) {
+export default function PostCard({ post, index, isLast }: PostCardProps) {
   return (
     <Link
       to={`/post/${post.slug}`}
       className={`group block border-b border-border px-2 py-8
                   transition-colors hover:bg-surface
-                  animate-fade-in stagger-${index + 1}`}
+                  animate-fade-in stagger-${index + 1}
+                  ${isLast ? '' : 'border-b'}`}
     >
       <div className="flex items-baseline justify-between gap-4">
         <time className="shrink-0 font-code text-xs text-text-dim tracking-wider">

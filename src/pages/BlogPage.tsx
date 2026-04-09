@@ -18,7 +18,7 @@ export default function BlogPage() {
 
         <div>
           {posts.map((post, i) => (
-            <PostCard key={post.slug} post={post} index={i} />
+            <PostCard key={post.slug} post={post} index={i} isLast={i === posts.length - 1} />
           ))}
         </div>
 
